@@ -13,8 +13,12 @@
     -- -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -- ----------------------------------------------------------------------------------------------------------------------
 
+local addonName, DTT = ...
+if not DTT then return end
 
 local COLOUR_RED, COLOUR_GREEN = "FF1A1A", GREEN_FONT_COLOR_CODE;
+-- Localization table
+DTT.L = LibStub("AceLocale-3.0"):GetLocale("DarkmoonTicketTooltip", false)
 
 local questItems = {
 	[71715] = { ["quest"] = 29451, ["tickets"] = 15 }, -- A Treatise on Strategy
@@ -39,13 +43,13 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 			if questItems[itemID] then
 			
 				local numTickets = questItems[itemID]["tickets"]
-				self:AddLine("Quest awards " .. numTickets .. " Darkmoon Prize Tickets");
+				self:AddLine(format(L["Quest awards %d %s"], numTickets, L["Darkmoon Prize Tickets"]))
 				
 					-- Check if quest was already completed
-					if IsQuestFlaggedCompleted(questItems[itemID]["quest"]) then
-						self:AddLine("Quest already completed!", 0xFF/255, 0x1A/255, 0x1A/255);
-					else
-						self:AddLine("Quest not completed yet!", 0x1E/255, 0xFF/255, 0x00/255);
+					if IsQuestFlaggedCompleted(questItems[itemID]["quest"]) then -- Is completed - > Show text in green
+						self:AddLine(L["Quest already completed!"], 0xFF/255, 0x1A/255, 0x1A/255)
+					else -- Not yet completed -> Show text in red
+						self:AddLine(L["Quest not yet completed!"], 0x1E/255, 0xFF/255, 0x00/255)
 					end
 					
 					if IsAddOnLoaded("TradeSkillMaster_AuctionDB") then
@@ -67,8 +71,8 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 						local iconSilver = "Interface\\MONEYFRAME\\UI-SilverIcon"
 						local iconCopper = "Interface\\MONEYFRAME\\UI-CopperIcon"
 						local tex = "%.2d|T%s:16|t"	
+						self:AddLine(format(L["Price per ticket: %s%s%s"], format(tex, g, iconGold), format(tex, s, iconSilver), format(tex, c, iconCopper)))
 						
-						self:AddLine(format("Price per ticket: %s%s%s", format(tex, g, iconGold), format(tex, s, iconSilver), format(tex, c, iconCopper)))
 					end
 					
 			end
