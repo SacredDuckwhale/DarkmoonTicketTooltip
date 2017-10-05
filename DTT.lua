@@ -16,7 +16,6 @@
 local addonName, DTT = ...
 if not DTT then return end
 
-local COLOUR_RED, COLOUR_GREEN = "FF1A1A", GREEN_FONT_COLOR_CODE;
 -- Localization table
 DTT.L = LibStub("AceLocale-3.0"):GetLocale("DarkmoonTicketTooltip", false)
 
@@ -36,10 +35,10 @@ local questItems = {
 -- Display tooltip information, but only on DMF quest items
 GameTooltip:HookScript("OnTooltipSetItem", function(self)
 	
-	local _, itemLink = self:GetItem();
+	local _, itemLink = self:GetItem()
 	if type(itemLink) == "string" then -- Is valid item string (i.e., not nil) -> Check if it's the right item
 	
-		local itemID = GetItemInfoInstant(itemLink);
+		local itemID = GetItemInfoInstant(itemLink)
 		
 			if questItems[itemID] then -- Is DMF turnin item -> Show tooltip info
 			
@@ -70,7 +69,6 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 						copperPerTicket = copperPerTicket - math_floor (s * 1000 + 0.5)
 						local c = math_floor(copperPerTicket + 0.5)
 						
-						
 						-- Display with the actual icons, though - as that looks much nicer
 						local iconGold = "Interface\\MONEYFRAME\\UI-GoldIcon"
 						local iconSilver = "Interface\\MONEYFRAME\\UI-SilverIcon"
@@ -81,10 +79,6 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 						self:AddLine(format(L["Price per ticket: %s%s%s"], format(tex, g, iconGold), format(tex, s, iconSilver), format(tex, c, iconCopper)))
 						
 					end
-					
 			end
 	end
-	
-	-- Summary of quests
-
-end);
+end)
