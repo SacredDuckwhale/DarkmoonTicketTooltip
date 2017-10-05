@@ -12,9 +12,9 @@
  * Adds a few lines to the tooltip of items that can be redeemed for Darkmoon Prize Tickets at the Darkmoon Faire
  * Lets you know whether or not the quest has been completed already
  * Shows how many tickets you will get if you turn in any of the quest items
- * Calculates the price per ticket for each item, using pricing data provided by [TradeSkillMaster_AuctionDB](https://mods.curse.com/addons/wow/tradeskillmaster_auctiondb) (needs to be installed for this to show)
+ * Calculates the price per ticket for each item, using pricing data provided by [TradeSkillMaster_AuctionDB](https://mods.curse.com/addons/wow/tradeskillmaster_auctiondb) (needs to be installed for this to work)
  
- ## How to use
+## How to use
  
  In a nutshell:
  
@@ -25,7 +25,7 @@
  
  There are no slash commands, fancy configuration interfaces, or spammy chat messages.
  
- ## Issues / Feature Requests
+## Issues / Feature Requests
 
 While I try to monitor the comments on this page, I don't always get notified of them. Therefore, I kindly ask you to use the [Issue Tracker](https://wow.curseforge.com/projects/darkmoontickettooltip/issues) on the Project Site when appropriate (You can use the same Curse account you use to comment here for that).
 
