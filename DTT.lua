@@ -29,7 +29,7 @@ local questItems = {
 	[71716] = { ["quest"] = 29464, ["tickets"] = 10 }, -- Soothsayer's Runes
 	[71952] = { ["quest"] = 29457, ["tickets"] = 5 }, -- Captured Insignia
 	[71951] = { ["quest"] = 29456, ["tickets"] = 5 }, -- Banner of the Fallen
-	[71953] = { ["quest"] = 29458, ["tickets"] = 5 }, --Adventurer's Journal
+	[71953] = { ["quest"] = 29458, ["tickets"] = 5 }, -- Adventurer's Journal
 };
 
 -- Display tooltip information, but only on DMF quest items
