@@ -17,7 +17,7 @@ local addonName, DTT = ...
 if not DTT then return end
 
 -- Localization table
-DTT.L = LibStub("AceLocale-3.0"):GetLocale("DarkmoonTicketTooltip", false)
+local L = LibStub("AceLocale-3.0"):GetLocale("DarkmoonTicketTooltip", false)
 
 -- Database of turnin items
 local questItems = {
