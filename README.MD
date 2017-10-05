@@ -14,7 +14,7 @@
  * Shows how many tickets you will get if you turn in any of the quest items
  * Calculates the price per ticket for each item, using pricing data provided by [TradeSkillMaster_AuctionDB](https://mods.curse.com/addons/wow/tradeskillmaster_auctiondb) (needs to be installed for this to show)
  
-  ## How to use
+ ## How to use
  
  In a nutshell:
  
