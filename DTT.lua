@@ -1,25 +1,6 @@
---[[
-	1.0 Displays number of tickets awarded for each item's respective quest
-
 	
-	Related:
-	https://mods.curse.com/addons/wow/muffin-darkmoon-helper
-	https://mods.curse.com/addons/wow/darkmoon_tracker
-	https://mods.curse.com/addons/wow/darkmoon-professional
-	https://mods.curse.com/addons/wow/dmfquest
-	
-]]--
 
--- TODO: Upvalues
--- TODO: Moonfang's Pelt, Daggermaw Map (one-time, but still...)
--- Frame to compare all items
--- Localisation of items
--- Slash command to show? Or hide/show if world event is active? X button to close/another to close permanently for the char (until the fare rolls around again)
--- Compare transmog / petcs to see if it is actually worth it
--- different price sources, manual prices?
--- set manual threshold (or based on pet price etc), then show which items will be worth buying (orange, yellow, green, red text colour)
 
--- TODO: Find appropriate colour codes
 local COLOUR_RED, COLOUR_GREEN = "FF1A1A", GREEN_FONT_COLOR_CODE;
 
 local questItems = {
@@ -47,7 +28,7 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 				local numTickets = questItems[itemID]["tickets"]
 				self:AddLine("Quest awards " .. numTickets .. " Darkmoon Prize Tickets");
 				
-					-- Check if quest was already completed TODO: this faire (calendar)
+					-- Check if quest was already completed
 					if IsQuestFlaggedCompleted(questItems[itemID]["quest"]) then
 						self:AddLine("Quest already completed!", 0xFF/255, 0x1A/255, 0x1A/255);
 					else
@@ -72,18 +53,12 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 						local iconGold = "Interface\\MONEYFRAME\\UI-GoldIcon"
 						local iconSilver = "Interface\\MONEYFRAME\\UI-SilverIcon"
 						local iconCopper = "Interface\\MONEYFRAME\\UI-CopperIcon"
-						local tex = "%.2d|T%s:16|t"						
-					--	self:AddLine("DBMarket: " .. marketPrice .. " " .. copperPerTicket .. " " .. g .. "g" .. s .. "s" .. c .. "c")
-					--	self:AddLine(format("Price per ticket: %dg%.2ds%.2dc", g, s, c))
+						local tex = "%.2d|T%s:16|t"	
+						
 						self:AddLine(format("Price per ticket: %s%s%s", format(tex, g, iconGold), format(tex, s, iconSilver), format(tex, c, iconCopper)))
 					end
 					
 			end
-		
-		
-
-		
-		
 	end
 	
 	-- Summary of quests
