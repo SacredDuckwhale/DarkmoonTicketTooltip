@@ -20,7 +20,7 @@ if not DTT then return end
 local L = LibStub("AceLocale-3.0"):GetLocale("DarkmoonTicketTooltip", false)
 
 -- Upvalues
-local type, format, math_floor, type, format, math.floor
+local type, format, math_floor = type, format, math.floor
 
 -- Database of turnin items
 local questItems = {
