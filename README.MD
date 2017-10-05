@@ -2,7 +2,7 @@
 
 **DarkmoonTicketTooltip** displays the amount of Darkmoon Prize tickets awarded in the tooltip quest items that can be turned in at the Faire, along with some other information that might be useful.
 
- If you have several alts and are interested in getting the most bang for your buck, you can identify the most efficient items to buy and glance over all the overpriced stuff that the price-gougers inevitably put up when the fare comes around.
+ If you have several alts and are interested in getting the most bang for your buck, you can identify the most efficient items to buy and glance over all the overpriced stuff that the price-gougers inevitably put up when the Faire comes around.
 
  Essentially, DTT helps you decide which of the DMF quest items you should buy (and when), hopefully making your monthly shopping for them much less painful. No more overspending on the least-worthwhile items or re-calculating prices every time the market changes. Thank goodness!
 
