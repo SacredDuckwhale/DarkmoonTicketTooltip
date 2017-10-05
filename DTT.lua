@@ -30,7 +30,6 @@ local questItems = {
 	[71952] = { ["quest"] = 29457, ["tickets"] = 5 }, -- Captured Insignia
 	[71951] = { ["quest"] = 29456, ["tickets"] = 5 }, -- Banner of the Fallen
 	[71953] = { ["quest"] = 29458, ["tickets"] = 5 }, -- Adventurer's Journal
-};
 	
 	[105891] = { quest = 33354, tickets = 10 }, -- Moonfang's Pelt -> Den Mother's Demise (probably too expensive in almost all cases, but added for completion)
 	[124669] = { quest = 38934, tickets = 100, numRequiredItems = 100 }, -- Darkmoon Daggermaw -> Silas' Secret Stash (one-time only)
