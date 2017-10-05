@@ -1,7 +1,22 @@
-## Interface: 70100
+## Interface: 70300
 ## Title: DarkmoonTicketTooltip
 ## Version: 1.0
-## Notes: Displays amount of darkmoon tickets awarded in the tooltip of DMF quest items, along with various other information
-## Author: Cakechart (EU - Outland)
+## Notes: Displays amount of Darkmoon Prize tickets awarded in the tooltip of DMF quest items, along with some other information of interest
+## Author: Cakechart
+
+## DefaultState: Enabled
+## LoadOnDemand: 0
+
+## X-Revision: @project-version@
+## X-Date: @project-date-iso@
+## X-License: GPL3
+## X-Embeds: LibStub, AceLocale-3.0
+
+## OptionalDeps: LibStub, AceLocale-3.0
+
+#@no-lib-strip@
+Libs\LibStub\LibStub.lua
+Libs\AceLocale-3.0\AceLocale-3.0.xml
+#@end-no-lib-strip@
 
 DTT.lua
