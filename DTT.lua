@@ -33,6 +33,7 @@ local questItems = {
 };
 	
 	[105891] = { quest = 33354, tickets = 10 }, -- Moonfang's Pelt -> Den Mother's Demise (probably too expensive in almost all cases, but added for completion)
+	[124669] = { quest = 38934, tickets = 100, numRequiredItems = 100 }, -- Darkmoon Daggermaw -> Silas' Secret Stash (one-time only)
 }
 
 -- Display tooltip information, but only on DMF quest items
@@ -46,6 +47,7 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 			if questItems[itemID] then -- Is DMF turnin item -> Show tooltip info
 			
 				local numTickets = questItems[itemID]["tickets"]
+				local numRequiredItems = questItems[itemID]["numRequiredItems"] or 1 -- Only 1 is required of the regular quest items
 				self:AddLine(format(L["Quest awards %d %s"], numTickets, L["Darkmoon Prize Tickets"]))
 				
 					-- Check if quest was already completed
@@ -59,7 +61,7 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 						
 						-- Get price from TSM's database (via their API)
 						local marketPrice = TSMAPI:GetItemValue(itemLink,"DBMinBuyout")
-						local copperPerTicket = marketPrice / numTickets
+						local copperPerTicket = marketPrice / numTickets * numRequiredItems
 						
 						-- Upvalues
 						local math_floor = math.floor
