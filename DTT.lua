@@ -77,10 +77,10 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 						local iconGold = "Interface\\MONEYFRAME\\UI-GoldIcon"
 						local iconSilver = "Interface\\MONEYFRAME\\UI-SilverIcon"
 						local iconCopper = "Interface\\MONEYFRAME\\UI-CopperIcon"
-						local tex = "%.2d|T%s:16|t" -- Using the  |T ... |t UI Escape sequence to insert textures into the tooltip's text	
+						local tex = { "%d|T%s:16|t", "%.2d|T%s:16|t", "%.2d|T%s:16|t" } -- Using the  |T ... |t UI Escape sequence to insert textures into the tooltip's text	-> for gold, silver, copper, respectively
 						
 						-- Finally, add everything to the tooltip
-						self:AddLine(format(L["Price per ticket: %s%s%s"], format(tex, g, iconGold), format(tex, s, iconSilver), format(tex, c, iconCopper)))
+						self:AddLine(format(L["Price per ticket: %s%s%s"], format(tex[1], g, iconGold), format(tex[2], s, iconSilver), format(tex[3], c, iconCopper)))
 						
 					end
 			end
