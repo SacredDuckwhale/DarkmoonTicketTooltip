@@ -33,6 +33,7 @@ local questItems = {
 };
 	
 	[105891] = { quest = 33354, tickets = 10 }, -- Moonfang's Pelt -> Den Mother's Demise (probably too expensive in almost all cases, but added for completion)
+}
 
 -- Display tooltip information, but only on DMF quest items
 GameTooltip:HookScript("OnTooltipSetItem", function(self)
