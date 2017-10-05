@@ -19,6 +19,9 @@ if not DTT then return end
 -- Localization table
 local L = LibStub("AceLocale-3.0"):GetLocale("DarkmoonTicketTooltip", false)
 
+-- Upvalues
+local type, format, math_floor, type, format, math.floor
+
 -- Database of turnin items
 local questItems = {
 	[71715] = { ["quest"] = 29451, ["tickets"] = 15, title = L["The Master Strategist"] }, -- A Treatise on Strategy
@@ -62,10 +65,6 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 						-- Get price from TSM's database (via their API)
 						local marketPrice = TSMAPI:GetItemValue(itemLink,"DBMinBuyout")
 						local copperPerTicket = marketPrice / numTickets * numRequiredItems
-						
-						-- Upvalues
-						local math_floor = math.floor
-						local format = string.format
 						
 						-- Extract values to display in the standard format of XgYYsZZc
 						local g = copperPerTicket / 10000
