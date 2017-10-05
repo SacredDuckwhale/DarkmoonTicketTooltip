@@ -31,6 +31,8 @@ local questItems = {
 	[71951] = { ["quest"] = 29456, ["tickets"] = 5 }, -- Banner of the Fallen
 	[71953] = { ["quest"] = 29458, ["tickets"] = 5 }, -- Adventurer's Journal
 };
+	
+	[105891] = { quest = 33354, tickets = 10 }, -- Moonfang's Pelt -> Den Mother's Demise (probably too expensive in almost all cases, but added for completion)
 
 -- Display tooltip information, but only on DMF quest items
 GameTooltip:HookScript("OnTooltipSetItem", function(self)
