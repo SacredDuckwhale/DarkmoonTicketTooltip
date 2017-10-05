@@ -46,16 +46,16 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 		
 			if questItems[itemID] then -- Is DMF turnin item -> Show tooltip info
 			
+				-- Check if quest was already completed 
+				if IsQuestFlaggedCompleted(questItems[itemID]["quest"]) then -- Is completed - > Show text in green
+					self:AddLine(L["Quest already completed!"], 0xFF/255, 0x1A/255, 0x1A/255)
+				else -- Not yet completed -> Show text in red
+					self:AddLine(L["Quest not yet completed!"], 0x1E/255, 0xFF/255, 0x00/255)
+				end
+			
 				local numTickets = questItems[itemID]["tickets"]
 				local numRequiredItems = questItems[itemID]["numRequiredItems"] or 1 -- Only 1 is required of the regular quest items
 				self:AddLine(format(L["Quest awards %d %s"], numTickets, L["Darkmoon Prize Tickets"]))
-				
-					-- Check if quest was already completed
-					if IsQuestFlaggedCompleted(questItems[itemID]["quest"]) then -- Is completed - > Show text in green
-						self:AddLine(L["Quest already completed!"], 0xFF/255, 0x1A/255, 0x1A/255)
-					else -- Not yet completed -> Show text in red
-						self:AddLine(L["Quest not yet completed!"], 0x1E/255, 0xFF/255, 0x00/255)
-					end
 					
 					if IsAddOnLoaded("TradeSkillMaster_AuctionDB") then -- TSM AuctionDB is available as a price source -> Show price per ticket (using the currently lowest item price)
 						
