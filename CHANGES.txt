@@ -1,6 +1,10 @@
 ------------------------------------------------------------------------
-## DarkmoonTicketTooltip v1.0.0 - Recent changes (1 releases)
+## DarkmoonTicketTooltip v1.0.1 - Recent changes (2 releases)
 ------------------------------------------------------------------------
 
+r1:
+	Fixed an error that could occur if there were no auctions available for a given quest item (only when using TSM as a pricing source)
+
+	
 r0:
 	Initial version
