@@ -23,7 +23,7 @@
  3. ???
  4. Profit!
  
- There are no slash commands, fancy configuration interfaces, or spammy chat messages.
+  There are no slash commands, fancy configuration interfaces, or spammy chat messages.
  
 ## Issues / Feature Requests
 
