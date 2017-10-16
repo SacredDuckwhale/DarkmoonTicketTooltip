@@ -14,7 +14,21 @@ install:
 
 script: /home/travis/.luarocks/bin/luacheck . --no-color -quiet -only "011"
 
-after_script: /curl -s [url]https://raw.githubusercontent.com/BigWigsMods/packager/master/release.sh[/url] | bash
+after_script: 
+file_type=
+if [ -n "$tag" ]; then
+    if [[ "${tag,,}" == *"alpha"* ]]; then
+        file_type=alpha
+    elif [[ "${tag,,}" == *"beta"* ]]; then
+    file_type=beta
+    else
+        file_type=release
+    fi
+else
+    echo "Found no tag, exiting."
+    exit 0
+fi
+/curl -s [url]https://raw.githubusercontent.com/BigWigsMods/packager/master/release.sh[/url] | bash
 
 notifications:
   email:
