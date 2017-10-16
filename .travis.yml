@@ -7,7 +7,7 @@ addons:
     packages:
     - luarocks
     - pandoc
-	
+
 install:
   - eval $(luarocks path --bin)
   - luarocks install --local luacheck
