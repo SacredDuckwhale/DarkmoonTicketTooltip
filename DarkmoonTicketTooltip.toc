@@ -7,6 +7,8 @@
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 
+## X-Curse-Project-ID: 279382
+## X-WoWI-ID: 24490
 ## X-Revision: @project-version@
 ## X-Date: @project-date-iso@
 ## X-License: GPL3
