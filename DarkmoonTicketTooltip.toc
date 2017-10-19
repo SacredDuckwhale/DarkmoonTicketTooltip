@@ -1,6 +1,6 @@
 ## Interface: 70300
 ## Title: DarkmoonTicketTooltip
-## Version: 1.0.1
+## Version: @project-version@
 ## Notes: Displays amount of Darkmoon Prize tickets awarded in the tooltip of DMF quest items, along with some other information of interest
 ## Author: Cakechart
 
