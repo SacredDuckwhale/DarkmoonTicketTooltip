@@ -1,6 +1,11 @@
 ------------------------------------------------------------------------
-## DarkmoonTicketTooltip v1.0.1 - Recent changes (2 releases)
+## DarkmoonTicketTooltip v1.0.1 - Recent changes (3 releases)
 ------------------------------------------------------------------------
+
+r2:
+	Updated TOC for 8.0.1
+	Updated the amount awarded by "The Master Strategist" (A Treatise on Strategy) quest
+
 
 r1:
 	Fixed an error that could occur if there were no auctions available for a given quest item (only when using TSM as a pricing source)
