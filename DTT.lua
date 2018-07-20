@@ -24,7 +24,7 @@ local type, format, math_floor = type, format, math.floor
 
 -- Database of turnin items
 local questItems = {
-	[71715] = { ["quest"] = 29451, ["tickets"] = 15, title = L["The Master Strategist"] }, -- A Treatise on Strategy
+	[71715] = { ["quest"] = 29451, ["tickets"] = 10, title = L["The Master Strategist"] }, -- A Treatise on Strategy
 	[71638] = { ["quest"] = 29446, ["tickets"] = 10, title = L["A Wondrous Weapon"] }, -- Ornate Weapon
 	[71637] = { ["quest"] = 29445, ["tickets"] = 10, title = L["An Intriguing Grimoire"] }, -- Mysterious Grimoire
 	[71636] = { ["quest"] = 29444, ["tickets"] = 10, title = L["An Exotic Egg"] }, -- Monstrous Egg
