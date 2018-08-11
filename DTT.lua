@@ -60,10 +60,10 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 				local numRequiredItems = questItems[itemID]["numRequiredItems"] or 1 -- Only 1 is required of the regular quest items
 				self:AddLine(format(L["Awards %s%d%s Darkmoon Prize Tickets"], "|cFF8080FF", numTickets, "|r"))
 					
-					if IsAddOnLoaded("TradeSkillMaster_AuctionDB") then -- TSM AuctionDB is available as a price source -> Show price per ticket (using the currently lowest item price)
+					if IsAddOnLoaded("TradeSkillMaster") then -- TSM AuctionDB is available as a price source -> Show price per ticket (using the currently lowest item price)
 						
 						-- Get price from TSM's database (via their API)
-						local marketPrice = TSMAPI:GetItemValue(itemLink,"DBMinBuyout") or TSMAPI:GetItemValue(itemLink,"DBMarket") -- Use current market price if no items are available for sale
+						local marketPrice = TSMAPI_FOUR.CustomPrice.GetItemPrice(itemLink,"DBMinBuyout") or TSMAPI_FOUR.CustomPrice.GetItemPrice(itemLink,"DBMarket") -- Use current market price if no items are available for sale
 						local copperPerTicket = marketPrice / numTickets * numRequiredItems
 						
 						-- Extract values to display in the standard format of XgYYsZZc
